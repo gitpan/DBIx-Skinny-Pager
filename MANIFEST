@@ -17,6 +17,7 @@ inc/Test/Base.pm
 inc/Test/Base/Filter.pm
 inc/Test/Builder.pm
 inc/Test/Builder/Module.pm
+inc/Test/Deep.pm
 inc/Test/Differences.pm
 inc/Test/LoadAllModules.pm
 inc/Test/More.pm
@@ -41,7 +42,6 @@ t/Logic-PlusOne/02-retrieve.t
 t/Mock/BasicMySQL.pm
 t/Mock/BasicMySQL/Schema.pm
 t/Page/to_hash.t
-xt/01_podspell.t
 xt/02_perlcritic.t
 xt/03_pod.t
 xt/perlcriticrc
