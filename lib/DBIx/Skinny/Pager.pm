@@ -4,8 +4,9 @@ use strict;
 use warnings;
 use base 'DBIx::Skinny::SQL';
 use DBIx::Skinny::Pager::Page;
+use DBIx::Skinny::Pager::ResultSet;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 __PACKAGE__->mk_accessors(qw(page));
 
@@ -28,7 +29,15 @@ sub retrieve {
     my $iter = $self->SUPER::retrieve(@_);
     my $total_entries = $self->get_total_entries($iter);
     my $pager = $self->pager_class->new($total_entries, $self->limit, ( $self->offset / $self->limit) + 1);
-    return ( $iter, $pager );
+
+    if ( wantarray ) {
+        return ( $iter, $pager );
+    } else {
+        return DBIx::Skinny::Pager::ResultSet->new(
+            iterator => $iter,
+            pager    => $pager,
+        );
+    }
 }
 
 1;
@@ -65,7 +74,9 @@ DBIx::Skinny::Pager -
   $rs2->limit(10);
   $rs2->page(2); # offset is 10 * ( 2 - 1) = 10.
   $rs2->select([qw(foo bar baz)]);
-  my ($iter, $pager) = $rs2->retrieve;
+  my $result = $rs2->retrieve;
+  $result->iterator #=> DBIx::Skinny::Iterator
+  $result->pager #=> Data::Page
 
 =head1 DESCRIPTION
 
