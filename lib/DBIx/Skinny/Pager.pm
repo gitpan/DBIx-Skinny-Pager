@@ -6,7 +6,7 @@ use base 'DBIx::Skinny::SQL';
 use DBIx::Skinny::Pager::Page;
 use DBIx::Skinny::Pager::ResultSet;
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 __PACKAGE__->mk_accessors(qw(page));
 
@@ -23,7 +23,7 @@ sub retrieve {
     Carp::croak("limit not found") unless defined($self->limit);
     unless ( defined($self->offset) ) {
         Carp::croak("limit or page not found") unless defined($self->page);
-        $self->offset($self->limit * ( $self->page - 1) );
+        $self->offset($self->limit * ( (int($self->page) || 1) - 1) );
     }
 
     my $iter = $self->SUPER::retrieve(@_);
