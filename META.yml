@@ -25,10 +25,10 @@ no_index:
     - xt
 requires:
   Carp: 0
-  DBIx::Skinny: 0
+  DBIx::Skinny: 0.0712
   Data::Page: 0
   Filter::Util::Call: 0
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://github.com/walf443/p5-dbix-skinny-pager.git
-version: 0.04
+version: 0.05

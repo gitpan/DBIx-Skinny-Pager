@@ -22,6 +22,7 @@ inc/Test/Differences.pm
 inc/Test/LoadAllModules.pm
 inc/Test/More.pm
 lib/DBIx/Skinny/Mixin/Pager.pm
+lib/DBIx/Skinny/Mixin/SearchWithPager.pm
 lib/DBIx/Skinny/Pager.pm
 lib/DBIx/Skinny/Pager/Logic/Count.pm
 lib/DBIx/Skinny/Pager/Logic/MySQLFoundRows.pm
@@ -35,6 +36,7 @@ META.yml
 README
 t/00_compile.t
 t/02-functional.t
+t/03-search_with_pager.t
 t/Logic-MySOLFoundRows/01-as_sql.t
 t/Logic-MySOLFoundRows/02-retrieve.t
 t/Logic-PlusOne/01-as_sql.t
