@@ -41,8 +41,8 @@ t/Logic-MySOLFoundRows/01-as_sql.t
 t/Logic-MySOLFoundRows/02-retrieve.t
 t/Logic-PlusOne/01-as_sql.t
 t/Logic-PlusOne/02-retrieve.t
-t/Mock/BasicMySQL.pm
-t/Mock/BasicMySQL/Schema.pm
+t/Mock/Basic.pm
+t/Mock/Basic/Schema.pm
 t/Page/to_hash.t
 xt/02_perlcritic.t
 xt/03_pod.t
