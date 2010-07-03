@@ -21,6 +21,7 @@ inc/Test/Deep.pm
 inc/Test/Differences.pm
 inc/Test/LoadAllModules.pm
 inc/Test/More.pm
+inc/Test/Requires.pm
 lib/DBIx/Skinny/Mixin/Pager.pm
 lib/DBIx/Skinny/Mixin/SearchWithPager.pm
 lib/DBIx/Skinny/Pager.pm
