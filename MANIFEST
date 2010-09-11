@@ -29,6 +29,7 @@ lib/DBIx/Skinny/Pager/Logic/Count.pm
 lib/DBIx/Skinny/Pager/Logic/MySQLFoundRows.pm
 lib/DBIx/Skinny/Pager/Logic/PlusOne.pm
 lib/DBIx/Skinny/Pager/Page.pm
+lib/DBIx/Skinny/Pager/Page/Default.pm
 lib/DBIx/Skinny/Pager/Page/PlusOne.pm
 lib/DBIx/Skinny/Pager/ResultSet.pm
 Makefile.PL
