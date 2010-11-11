@@ -26,4 +26,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://github.com/walf443/p5-dbix-skinny-pager.git
-version: 0.08
+version: 0.09
