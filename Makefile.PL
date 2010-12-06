@@ -7,14 +7,13 @@ name 'DBIx-Skinny-Pager';
 all_from 'lib/DBIx/Skinny/Pager.pm';
 readme_from 'lib/DBIx/Skinny/Pager.pm';
 
-# requires '';
-
 tests 't/*.t t/**/*.t';
 author_tests 'xt';
 
-requires 'DBIx::Skinny', 0.0712;
+requires 'DBIx::Skinny', 0.0729;
 requires 'Data::Page';
 requires 'Carp';
+requires 'Class::Accessor::Lite';
 
 build_requires 'Test::More';
 build_requires 'Test::LoadAllModules';
@@ -23,7 +22,6 @@ build_requires 'Test::Differences';
 build_requires 'Test::Requires';
 build_requires 'Module::Install::ReadmeFromPod';
 build_requires 'Module::Install::Repository';
-use_test_base;
 
 auto_include;
 auto_set_repository;

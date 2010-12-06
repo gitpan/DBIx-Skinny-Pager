@@ -5,10 +5,11 @@ use warnings;
 use base 'DBIx::Skinny::SQL';
 use DBIx::Skinny::Pager::Page::Default;
 use DBIx::Skinny::Pager::ResultSet;
+use Class::Accessor::Lite;
 
-our $VERSION = '0.09';
+our $VERSION = '0.10';
 
-__PACKAGE__->mk_accessors(qw(page));
+Class::Accessor::Lite->mk_accessors(qw/page/);
 
 sub get_total_entries {
     die "please override";
@@ -93,7 +94,7 @@ Keiji Yoshimi E<lt>walf443 at gmail dot comE<gt>
 
 =head1 SEE ALSO
 
-+<DBIx::Skinny>, +<DBIx::Skinny::SQL>, +<DBIx::Skinny::Mixin>, +<Data::Page>
+L<DBIx::Skinny>, L<DBIx::Skinny::SQL>, L<DBIx::Skinny::Mixin>, L<Data::Page>
 
 =head1 LICENSE
 
